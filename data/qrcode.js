@@ -252,7 +252,7 @@
 		 	}
 
 		 	aHTML.push('</table>');
-		 	_el.innerHTML = aHTML.join('');
+		 	_el.textContent = aHTML.join('');
 
 			// Fix the margin values as real size.
 			var elTable = _el.childNodes[0];
@@ -268,7 +268,7 @@
 		 * Clear the QRCode
 		 */
 		 Drawing.prototype.clear = function () {
-		 	this._el.innerHTML = '';
+		 	this._el.textContent = '';
 		 };
 
 		 return Drawing;
