@@ -1,0 +1,9 @@
+{
+  "name": "url-to-qr",
+  "title": "Url to QrCode",
+  "id": "jid1-ZSMfwe4lCAw9oQ",
+  "description": "an addon for convert URLs to QrCode",
+  "author": "Saeed Moghadam",
+  "license": "MPL 2.0",
+  "version": "0.1"
+}
