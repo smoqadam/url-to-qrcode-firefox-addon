@@ -8,4 +8,4 @@ sometimes you need to open an URL in your phone or tablet. with this add-on you 
 #### [add-on home page] (https://addons.mozilla.org/en-US/firefox/addon/url-to-qrcode/)
 
 
-thanks to (qrcode.me)
+thanks to (https://github.com/amanuel/JS-HTML5-QRCode-Generator)
