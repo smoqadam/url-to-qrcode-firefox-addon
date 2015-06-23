@@ -1219,7 +1219,7 @@ QRBitBuffer.prototype = {
 }
 
 
-var qr = new QRCode(4, QRErrorCorrectLevel.M); 
+var qr = new QRCode(8, QRErrorCorrectLevel.L); 
 
 
 function showQRCode(text) {
@@ -1228,7 +1228,7 @@ function showQRCode(text) {
   var padding = 0; // (white area around your QRCode)
   var black = "rgb(0,0,0)";
   var white = "rgb(255,255,255)";
-  var QRCodeVersion = 4; // 1-40 see http://www.denso-wave.com/qrcode/qrgene2-e.html
+  var QRCodeVersion = 10; // 1-40 see http://www.denso-wave.com/qrcode/qrgene2-e.html
 
   var canvas=document.createElement('canvas');
   var qrCanvasContext = canvas.getContext('2d');
