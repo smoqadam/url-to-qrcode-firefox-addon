@@ -1219,10 +1219,98 @@ QRBitBuffer.prototype = {
 }
 
 
-var qr = new QRCode(8, QRErrorCorrectLevel.L); 
+var qr ; 
+
+
+function getBestLevel (length) {
+	
+	levels = {
+		1 :{
+			L : 152 ,
+			M : 128 ,
+			Q : 104 ,
+			H : 72
+		},
+		2 :{
+			L : 272 ,
+			M : 224 ,
+			Q : 176 ,
+			H : 128
+		},
+		3 :{
+			L : 440 ,
+			M : 352 ,
+			Q : 272 ,
+			H : 208
+		},
+		4 :{
+			L : 640 ,
+			M : 512 ,
+			Q : 384 ,
+			H : 288
+		},
+		5 :{
+			L : 864 ,
+			M : 688 ,
+			Q : 496 ,
+			H : 368
+		},
+		6 :{
+			L : 1088 ,
+			M : 864,
+			Q : 608 ,
+			H : 480
+		},
+		7 :{
+			L : 1248 ,
+			M : 991 ,
+			Q : 704 ,
+			H : 528
+		},8 :{
+			L : 1552 ,
+			M : 1232,
+			Q : 880,
+			H : 688
+		},
+		9 :{
+			L : 1856 ,
+			M : 1456,
+			Q : 1056,
+			H : 800
+		},10 :{
+			L : 2192 ,
+			M : 1728,
+			Q : 1232,
+			H : 976
+		}
+
+	}
+
+	for(var key in levels){
+		for(var l in levels[key]){
+		  // console.log(l, levels[key][l])
+		  if(length <= levels[key][l]){
+		  	return {
+		  		level : key,
+		  		errorCorrectLevel : QRErrorCorrectLevel[l]
+		  	}
+		  }
+		}
+	}
+
+}
 
 
 function showQRCode(text) {
+
+  var dataLength ;
+
+  dataLength = text.length * 8 + 12 ;
+
+  blevel = getBestLevel(dataLength);
+  console.log(blevel);
+  qr = new QRCode(blevel.level, blevel.errorCorrectLevel);
+console.log(qr);
 
   var dotsize = 5;  // size of box drawn on canvas
   var padding = 0; // (white area around your QRCode)
