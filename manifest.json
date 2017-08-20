@@ -1,0 +1,21 @@
+{
+
+  "manifest_version": 2,
+  "name": "Url to QrCode",
+  "description": "Converts tab URL to QrCode.",
+  "author": "Saeed Moghadam",
+  "version": "0.6",
+  "icons": {
+    "32": "data/images.png"
+  },
+
+  "browser_action": {
+    "browser_style": false,
+    "default_icon": "data/images.png",
+    "default_title" : "Click to convert URL to QRCode",
+    "default_popup": "data/index.html"
+  },
+
+  "permissions": ["activeTab"]
+
+}
