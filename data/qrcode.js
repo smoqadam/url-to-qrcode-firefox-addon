@@ -1356,6 +1356,8 @@ console.log(qr);
  }
 
 
+/* old Firefox API */
+if (self && self.port) {
  self.port.on('show',function onShow(data) {
  	var qrDiv = document.getElementById('qr');
  	if(qrDiv.children[0])
@@ -1365,3 +1367,21 @@ console.log(qr);
  	}
  	qrDiv.appendChild(showQRCode(data.url));
  });
+}
+
+/* WebExtensions API */
+if (browser.tabs && browser.tabs.query) {
+ function getActiveTab() {
+  return browser.tabs.query({currentWindow: true, active: true});
+ }
+ getActiveTab().then(function (data) {
+	data = data[0]; /* only tab in set */
+	var qrDiv = document.getElementById('qr');
+	if(qrDiv.children[0])
+	{
+		var child = qrDiv.children[0];
+		qrDiv.removeChild(child);
+	}
+	qrDiv.appendChild(showQRCode(data.url));
+});
+}
