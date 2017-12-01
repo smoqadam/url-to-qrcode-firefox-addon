@@ -4,7 +4,7 @@
   "name": "Url to QrCode",
   "description": "Converts tab URL to QrCode.",
   "author": "Saeed Moghadam",
-  "version": "0.6",
+  "version": "0.8",
   "icons": {
     "32": "data/images.png"
   },
