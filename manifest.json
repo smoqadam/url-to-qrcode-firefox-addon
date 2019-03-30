@@ -10,7 +10,7 @@
   },
 
   "browser_action": {
-    "browser_style": false,
+    "browser_style": true,
     "default_icon": "data/images.png",
     "default_title" : "URL to QR code",
     "default_popup": "data/index.html"
