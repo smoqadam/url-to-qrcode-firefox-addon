@@ -5,7 +5,7 @@ if (browser.tabs && browser.tabs.query) {
 	getActiveTab().then(function (data) {
 		data = data[0]; /* only tab in set */
 		var el = kjua({
-			render: 'convas',
+			render: 'canvas',
 			text: data.url,
 			size:250,
 		});
