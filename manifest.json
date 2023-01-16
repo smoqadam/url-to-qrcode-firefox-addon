@@ -4,7 +4,7 @@
   "name": "URL to QR code",
   "description": "Converts the tab URL to QR code.",
   "author": "Saeed Moghadam",
-  "version": "0.9",
+  "version": "1.0",
   "icons": {
     "32": "data/images.png"
   },
@@ -16,6 +16,15 @@
     "default_popup": "data/index.html"
   },
 
-  "permissions": ["activeTab"]
+  "permissions": ["activeTab", "storage"],
+  "options_ui": {
+    "page": "data/options.html",
+    "chrome_style": true
+  },
 
+  "browser_specific_settings": {
+    "gecko": {
+      "id": "addon@example.com"
+    }
+  }
 }

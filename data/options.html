@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <style>
+        form{
+            padding: 20px;
+        }
+
+        button {
+            background-color: #04AA6D;
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-decoration: none;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+        label {
+            width: 150px;
+            display: inline-block;
+            margin-top: 15px;
+        }
+
+        #msg {
+            color: #04AA6D;
+            font-size: 15px;
+            padding: 10px;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+<form>
+    <a href="#" id="back">back</a>
+    <div id="msg"></div>
+    <label for="fill-color">Fill color </label>
+    <input type="text" id="fill-color" name="fill-color" />
+    <br>
+    <label for="bg-color">Background color </label>
+    <input type="text" id="bg-color" name="bg-color" />
+    <br>
+    <label for="size">Size </label>
+    <input type="number" id="size" name="size" />
+
+    <br>
+    <button type="submit">Save</button>
+
+</form>
+
+<script src="options.js"></script>
+</body>
+</html>
